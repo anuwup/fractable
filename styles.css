@@ -1,0 +1,744 @@
+:root {
+  --font-content: -apple-system, BlinkMacSystemFont, "Inter", "IBM Plex Sans", Segoe UI, Helvetica, Arial, sans-serif;
+  --font-mono: SFMono-Regular, Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  --wrap-wide: Min(54em, 95vw);
+  --flexoki-black: #100F0F;
+  --flexoki-paper: #FFFCF0;
+  --flexoki-50: #F2F0E5;
+  --flexoki-100: #E6E4D9;
+  --flexoki-150: #DAD8CE;
+  --flexoki-200: #CECDC3;
+  --flexoki-300: #B7B5AC;
+  --flexoki-400: #9F9D96;
+  --flexoki-500: #878580;
+  --flexoki-600: #6F6E69;
+  --flexoki-700: #575653;
+  --flexoki-800: #403E3C;
+  --flexoki-850: #343331;
+  --flexoki-900: #282726;
+  --flexoki-950: #1C1B1A;
+  --flexoki-red-50: #FFE1D5;
+  --flexoki-red-100: #FFCABB;
+  --flexoki-red-150: #FDB2A2;
+  --flexoki-red-200: #F89A8A;
+  --flexoki-red-300: #E8705F;
+  --flexoki-red-400: #D14D41;
+  --flexoki-red-500: #C03E35;
+  --flexoki-red-600: #AF3029;
+  --flexoki-red-700: #942822;
+  --flexoki-red-800: #6C201C;
+  --flexoki-red-850: #551B18;
+  --flexoki-red-900: #3E1715;
+  --flexoki-red-950: #261312;
+  --flexoki-orange-50: #FFE7CE;
+  --flexoki-orange-100: #FED3AF;
+  --flexoki-orange-150: #FCC192;
+  --flexoki-orange-200: #F9AE77;
+  --flexoki-orange-300: #EC8B49;
+  --flexoki-orange-400: #DA702C;
+  --flexoki-orange-500: #CB6120;
+  --flexoki-orange-600: #BC5215;
+  --flexoki-orange-700: #9D4310;
+  --flexoki-orange-800: #71320D;
+  --flexoki-orange-850: #59290D;
+  --flexoki-orange-900: #40200D;
+  --flexoki-orange-950: #27180E;
+  --flexoki-yellow-50: #FAEEC6;
+  --flexoki-yellow-100: #F6E2A0;
+  --flexoki-yellow-150: #F1D67E;
+  --flexoki-yellow-200: #ECCB60;
+  --flexoki-yellow-300: #DFB431;
+  --flexoki-yellow-400: #D0A215;
+  --flexoki-yellow-500: #BE9207;
+  --flexoki-yellow-600: #AD8301;
+  --flexoki-yellow-700: #8E6B01;
+  --flexoki-yellow-800: #664D01;
+  --flexoki-yellow-850: #503D02;
+  --flexoki-yellow-900: #3A2D04;
+  --flexoki-yellow-950: #241E08;
+  --flexoki-green-50: #EDEECF;
+  --flexoki-green-100: #DDE2B2;
+  --flexoki-green-150: #CDD597;
+  --flexoki-green-200: #BEC97E;
+  --flexoki-green-300: #A0AF54;
+  --flexoki-green-400: #879A39;
+  --flexoki-green-500: #768D21;
+  --flexoki-green-600: #66800B;
+  --flexoki-green-700: #536907;
+  --flexoki-green-800: #3D4C07;
+  --flexoki-green-850: #313D07;
+  --flexoki-green-900: #252D09;
+  --flexoki-green-950: #1A1E0C;
+  --flexoki-cyan-50: #DDF1E4;
+  --flexoki-cyan-100: #BFE8D9;
+  --flexoki-cyan-150: #A2DECE;
+  --flexoki-cyan-200: #87D3C3;
+  --flexoki-cyan-300: #5ABDAC;
+  --flexoki-cyan-400: #3AA99F;
+  --flexoki-cyan-500: #2F968D;
+  --flexoki-cyan-600: #24837B;
+  --flexoki-cyan-700: #1C6C66;
+  --flexoki-cyan-800: #164F4A;
+  --flexoki-cyan-850: #143F3C;
+  --flexoki-cyan-900: #122F2C;
+  --flexoki-cyan-950: #101F1D;
+  --flexoki-blue-50: #E1ECEB;
+  --flexoki-blue-100: #C6DDE8;
+  --flexoki-blue-150: #ABCFE2;
+  --flexoki-blue-200: #92BFDB;
+  --flexoki-blue-300: #66A0C8;
+  --flexoki-blue-400: #4385BE;
+  --flexoki-blue-500: #3171B2;
+  --flexoki-blue-600: #205EA6;
+  --flexoki-blue-700: #1A4F8C;
+  --flexoki-blue-800: #163B66;
+  --flexoki-blue-850: #133051;
+  --flexoki-blue-900: #12253B;
+  --flexoki-blue-950: #101A24;
+  --flexoki-purple-50: #F0EAEC;
+  --flexoki-purple-100: #E2D9E9;
+  --flexoki-purple-150: #D3CAE6;
+  --flexoki-purple-200: #C4B9E0;
+  --flexoki-purple-300: #A699D0;
+  --flexoki-purple-400: #8B7EC8;
+  --flexoki-purple-500: #735EB5;
+  --flexoki-purple-600: #5E409D;
+  --flexoki-purple-700: #4F3685;
+  --flexoki-purple-800: #3C2A62;
+  --flexoki-purple-850: #31234E;
+  --flexoki-purple-900: #261C39;
+  --flexoki-purple-950: #1A1623;
+  --flexoki-magenta-50: #FEE4E5;
+  --flexoki-magenta-100: #FCCFDA;
+  --flexoki-magenta-150: #F9B9CF;
+  --flexoki-magenta-200: #F4A4C2;
+  --flexoki-magenta-300: #E47DA8;
+  --flexoki-magenta-400: #CE5D97;
+  --flexoki-magenta-500: #B74583;
+  --flexoki-magenta-600: #A02F6F;
+  --flexoki-magenta-700: #87285E;
+  --flexoki-magenta-800: #641F46;
+  --flexoki-magenta-850: #4F1B39;
+  --flexoki-magenta-900: #39172B;
+  --flexoki-magenta-950: #24131D;
+}
+
+:root {
+  --color-bg-primary: var(--flexoki-blue-50);
+  --color-bg-secondary: var(--flexoki-blue-100);
+  --color-tx: var(--flexoki-blue-950);
+  --theme-toggle-image: url(../assets/toDarkMode.svg);
+}
+
+.dark {
+  --color-bg-primary: var(--flexoki-blue-950);
+  --color-bg-secondary: var(--flexoki-blue-850);
+  --color-bg-tertiary: var(--flexoki-blue-650);
+  --color-tx: var(--flexoki-blue-50);
+  --color-tx-muted: var(--flexoki-blue-300);
+  --color-tx-faint: var(--flexoki-blue-200);
+  --color-ui-normal: var(--flexoki-blue-700);
+  --theme-toggle-image: url(../assets/toLightMode.svg);
+}
+
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+/* Document
+   ========================================================================== */
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+html {
+  line-height: 1.15;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/* Sections
+   ========================================================================== */
+/**
+ * Remove the margin in all browsers.
+ */
+body {
+  margin: 0;
+}
+
+/**
+ * Render the `main` element consistently in IE.
+ */
+main {
+  display: block;
+}
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+hr {
+  box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+pre {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Remove the gray background on active links in IE 10.
+ */
+a {
+  background-color: transparent;
+}
+
+/**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+abbr[title] {
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+  /* 2 */
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove the border on images inside links in IE 10.
+ */
+img {
+  border-style: none;
+}
+
+/* Forms
+   ========================================================================== */
+/**
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  line-height: 1.15;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+}
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+button,
+input {
+  /* 1 */
+  overflow: visible;
+}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+button,
+select {
+  /* 1 */
+  text-transform: none;
+}
+
+/**
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
+button,
+[type=button],
+[type=reset],
+[type=submit] {
+  -webkit-appearance: button;
+}
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+button::-moz-focus-inner,
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+button:-moz-focusring,
+[type=button]:-moz-focusring,
+[type=reset]:-moz-focusring,
+[type=submit]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+ * Correct the padding in Firefox.
+ */
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+legend {
+  box-sizing: border-box;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  white-space: normal;
+  /* 1 */
+}
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+progress {
+  vertical-align: baseline;
+}
+
+/**
+ * Remove the default vertical scrollbar in IE 10+.
+ */
+textarea {
+  overflow: auto;
+}
+
+/**
+ * 1. Add the correct box sizing in IE 10.
+ * 2. Remove the padding in IE 10.
+ */
+[type=checkbox],
+[type=radio] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+[type=search] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */
+}
+
+/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+}
+
+/* Interactive
+   ========================================================================== */
+/*
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */
+details {
+  display: block;
+}
+
+/*
+ * Add the correct display in all browsers.
+ */
+summary {
+  display: list-item;
+}
+
+/* Misc
+   ========================================================================== */
+/**
+ * Add the correct display in IE 10+.
+ */
+template {
+  display: none;
+}
+
+/**
+ * Add the correct display in IE 10.
+ */
+[hidden] {
+  display: none;
+}
+
+:root,
+* {
+  font-family: var(--font-content);
+  color: var(--color-tx);
+  color-scheme: root dark;
+}
+
+body {
+  background-color: var(--color-bg-primary);
+  width: min(84%, 700px);
+  margin: auto;
+  margin-top: calc(1.272em + 2vh);
+  position: relative;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+@media (max-width: 600px) {
+  body {
+    width: min(86%, 700px);
+  }
+}
+
+nav {
+  padding: 0.25em 0.1em 0.2em;
+  left: -0.1em !important;
+  position: relative;
+}
+
+nav a {
+  text-decoration: none;
+}
+nav a:hover {
+  border-radius: 0.4px;
+  background-color: var(--color-bg-secondary);
+}
+
+#theme-toggler {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 0.318em;
+  background-color: var(--color-bg-secondary);
+  border: 0.9px solid var(--color-ui-normal);
+  border-radius: 900px;
+  display: flex;
+}
+
+#theme-toggler:hover {
+  cursor: pointer;
+}
+
+#theme-toggler toggle {
+  width: 1em;
+  height: 1em;
+  border: transparent;
+  background-image: var(--theme-toggle-image);
+  content: "";
+}
+
+table {
+  background-color: var(--color-bg-secondary);
+  border: 0.01em solid var(--color-ui-normal);
+  border-radius: 0.4em;
+  margin-top: 4.235801032em;
+  width: 100%;
+}
+
+table td {
+  padding: 1em;
+  font-family: var(--font-mono);
+}
+
+.hidden {
+  display: none;
+}
+
+.wide {
+  /* padding: 1.5em 0; */
+  max-width: min(100vw, var(--wrap-wide));
+  width: min(100vw, var(--wrap-wide));
+  margin-left: calc((min(100vw, var(--wrap-wide)) - 100%) / -2);
+}
+
+@media (max-width: 600px) {
+  .mh {
+    display: none;
+  }
+  .mobile-grid-rows {
+    grid-auto-flow: row;
+  }
+}
+nav * {
+  color: var(--color-tx-muted);
+  font-size: calc(0.87em + 0.2vw);
+}
+
+nav > span:nth-of-type(1) {
+  color: var(--color-tx);
+  margin-right: 0.1em;
+}
+
+nav > span:nth-of-type(2) {
+  color: var(--color-tx-faint);
+  margin-right: 0.1em;
+}
+
+nav > span:nth-of-type(3) {
+  color: var(--color-tx-muted);
+  font-weight: 300;
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5em;
+}
+
+table.changelog {
+  table-layout: fixed;
+}
+
+table.changelog td {
+  width: auto;
+  max-width: 100%;
+  border-radius: 0.2em;
+  word-wrap: break-word !important;
+}
+
+:root {
+  font-size: 1rem;
+}
+
+h1 {
+  font-weight: 500;
+  font-size: calc(1.61803399em + 0.5vw);
+  letter-spacing: min(-0.03em + 0.03vw, -0.01em);
+  margin-top: 1.6180339887em;
+}
+
+h2 {
+  font-weight: 500;
+}
+
+p,
+:root {
+  line-height: 1.6180339887em;
+}
+
+p {
+  font-size: 1.08rem;
+}
+
+:root {
+  --input-bg-color: var(--flexoki-blue-100);
+  --input-border-color: var(--flexoki-blue-200);
+  --input-text-color: var(--flexoki-blue-300);
+  --input-placeholder-color: var(--flexoki-blue-400);
+  --input-focus-border-color: var(--flexoki-blue-500);
+  --button-bg-color: var(--flexoki-blue-500);
+  --button-border-color: var(--flexoki-blue-600);
+  --button-text-color: var(--flexoki-blue-700);
+  --button-hover-bg-color: var(--flexoki-blue-600);
+  --button-hover-border-color: var(--flexoki-blue-700);
+}
+
+.dark {
+  --input-bg-color: var(--flexoki-blue-900);
+  --input-border-color: var(--flexoki-blue-800);
+  --input-text-color: var(--flexoki-blue-700);
+  --input-placeholder-color: var(--flexoki-blue-600);
+  --input-focus-border-color: var(--flexoki-blue-500);
+  --button-bg-color: var(--flexoki-blue-700);
+  --button-border-color: var(--flexoki-blue-600);
+  --button-text-color: var(--flexoki-blue-500);
+  --button-hover-bg-color: var(--flexoki-blue-600);
+  --button-hover-border-color: var(--flexoki-blue-500);
+}
+
+input,
+select {
+  background-color: var(--input-bg-color);
+  border: 1px solid;
+  border-color: var(--input-border-color);
+  color: var(--input-text-color);
+}
+input::-moz-placeholder, select::-moz-placeholder {
+  color: var(--input-placeholder-color);
+}
+input::placeholder,
+select::placeholder {
+  color: var(--input-placeholder-color);
+}
+input:focus,
+select:focus {
+  border-color: var(--input-focus-border-color);
+}
+
+button {
+  background-color: var(--button-bg-color);
+  border: 1px solid;
+  border-color: var(--button-border-color);
+  color: white !important;
+  padding: 0.518em 0.4em;
+  border-radius: 0.4em;
+  margin: 2px;
+}
+button:hover {
+  background-color: var(--button-hover-bg-color);
+  border-color: var(--button-hover-border-color);
+}
+
+button * {
+  color: white !important;
+}
+
+input,
+select,
+button {
+  color: var(--color-tx-faint);
+  padding: 0.518em 0.4em;
+  border-radius: 0.4em;
+  margin: 2px;
+}
+
+#add-entry {
+  display: grid;
+  width: 100%;
+}
+
+table th {
+  font-weight: 400;
+  font-family: var(--font-mono);
+}
+
+table {
+  padding: 0.3em;
+}
+
+tbody {
+  background-color: var(--color-bg-primary);
+}
+
+td {
+  width: calc(2em + 0.7vw);
+  max-width: calc(2em + 0.7vw);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  border-radius: 0.2em;
+}
+td:hover {
+  box-shadow: inset 0px 0px 0px 3px var(--color-bg-secondary);
+}
+td.day {
+  background-color: var(--color-bg-secondary);
+}
+td:not(.day) {
+  background-color: var(--color-bg-tertiary);
+  text-align: center;
+}/*# sourceMappingURL=styles.css.map */

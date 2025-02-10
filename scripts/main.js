@@ -450,6 +450,36 @@ const formatDate = (date, day, hour, minute, isEnd = false) => {
 
 document.getElementById("export-ics").addEventListener("click", exportToICS);
 
+const exportToGoogleCalendar = () => {
+  slotData.forEach(slot => {
+    if (slot.segments.length === 0) return;
+
+    slot.segments.forEach(segment => {
+      const segmentDate = segmentDates[segment];
+      if (!segmentDate) return;
+
+      slot.classTimings.forEach(timing => {
+        const [startHour, startMinute] = timing.time.split(" - ")[0].split(".");
+        const [endHour, endMinute] = timing.time.split(" - ")[1].split(".");
+
+        const startDate = formatDate(segmentDate.start, timing.day, startHour, startMinute);
+        const endDate = formatDate(segmentDate.start, timing.day, endHour, endMinute, true);
+
+        let googleCalendarUrl = "https://www.google.com/calendar/render?action=TEMPLATE";
+        googleCalendarUrl += `&dates=${startDate}/${endDate}`;
+        googleCalendarUrl += `&text=${encodeURIComponent(slot.courseName)}`;
+        googleCalendarUrl += `&details=${encodeURIComponent(`Course Code: ${slot.courseCode}\nInstructors: ${slot.instructors.join(", ")}`)}`;
+        googleCalendarUrl += `&recur=RRULE:FREQ=WEEKLY;UNTIL=${segmentDate.end.toISOString().replace(/[-:]/g, "").split(".")[0] + "Z"}`;
+
+        window.open(googleCalendarUrl, "_blank");
+      });
+    });
+  });
+};
+
+document.getElementById("export-google-calendar").addEventListener("click", exportToGoogleCalendar);
+
+
 // Function to store data in local storage
 const storeData = () => {
   localStorage.setItem('slotData', JSON.stringify(slotData));
@@ -510,11 +540,12 @@ function addSlot(courseCodeElement, courseSlotElement) {
     segmentElement.removeAttribute("title");
   }
 
-  if (slotToAdd.courseCode !== "") {
+  if (slotToAdd.segments.length > 0) {
     if (!askConfirmation("A course at this slot already exists. Replace?")) {
       return;
     }
     slotToAdd.dateModified = new Date();
+    slotToAdd.segments = [];
   } else {
     slotToAdd.dateAdded = new Date();
   }
