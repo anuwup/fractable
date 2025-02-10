@@ -34,17 +34,15 @@
 		</button>
 		<h1>Fractable</h1>
 		<p>Fractable is a quick timetable generator made for the fractal academic system followed at IIT Hyderabad. </p>
+		<p>Simply add your courses and their details to generate a timetable.</p>
 		<!-- add a caution that the web page is in development -->
 		<!-- <p class="center caution">This webpage is not completed. Please report any bugs or issues to the developer.</p> -->
 
 		<div id="add-entry" class="center">
 			<span class="eyebrow">
-				<input type="text" placeholder="Course Code" id="course-code" class="inputs course-code">
-			</span>
-			<input type="text" placeholder="Intro to Programming" id="course-name" class="inputs course-name">
-			<span class="course-secondary-details">
-				<input type="text" placeholder="LHC 5" id="course-location" class="inputs location">
-				<!-- <span>•</span> -->
+				<input type="text" placeholder="ID1063" id="course-code" class="inputs course-code">
+				<input type="text" placeholder="Intro to Programming" id="course-name" class="inputs course-name">
+				<input type="text" placeholder="LH 5 (Optional)" id="course-location" class="inputs location">
 				<select id="slot-selector" class="inputs">
 					<option id="slot_a">Slot A</option>
 					<option id="slot_b">Slot B</option>
@@ -68,16 +66,17 @@
 					<option id="slot_an5">Slot AN5</option>
 				</select>
 				<!-- <span>•</span> -->
-				<input type="text" placeholder="1-6" id="segment" class="inputs segment">
+				<input type="text" placeholder="1-6" id="segment" class="inputs segment" aria-label="Segment"
+					title="Segment">
+				<input type="text" placeholder="Instructors" id="instructors" class="inputs instructors">
 			</span>
-			<input type="text" placeholder="Instructors" id="course-code" class="inputs instructors">
 
 			<button type="button" id="add-course" class="submit-button">Add Course</button>
 
 		</div>
 
 		<section>
-			<table id="output-table" class="center wide mh">
+			<table id="output-table" class="center wide">
 				<thead>
 					<th id="clear-data"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
 							viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
@@ -193,11 +192,10 @@
 						<path d="M21 11.354V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h7.343" />
 						<path d="M3 10h18" />
 						<path d="M8 2v4" />
-					</svg><span>Add to Google Calendar</span></button></div>
+					</svg><span>Google Calendar</span></button></div>
 		</div>
 
-
-		<section>
+		<!-- <section>
 			<h2>Create table in a few clicks: Bookmarklet</h2>
 			You can create a bookmarklet to create the timetable in a few clicks <br>
 			To create the bookmarklet, simply drag the "Fractabler" link below into your bookmarks.
@@ -206,7 +204,7 @@
 			<br>
 			Then click the bookmark when you are on the course registration form page in ERP.
 			<br>
-		</section>
+		</section> -->
 		<!-- <section class="todo-section">
 
 			<h2>Changelog</h2>
@@ -275,7 +273,7 @@
         </ul>
         </li>
       </details> -->
-		</section> -->
+		</section>
 		<dialog id="confirm-close-dialog">
 			<p class="discard-message-text">Discard changes?</p>
 			<form method="dialog">
