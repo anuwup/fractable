@@ -22,7 +22,7 @@ const segmentDates = {
 	"1-6": { start: new Date('2025-01-02'), end: new Date('2025-04-30') },
 	"3-4": { start: new Date('2025-02-10'), end: new Date('2025-03-24') },
 	"3-6": { start: new Date('2025-02-10'), end: new Date('2025-04-30') },
-	"5-6": { start: new Date('2025-03-25'), end: new Date('2025-06-30') },
+	"5-6": { start: new Date('2025-03-25'), end: new Date('2025-04-30') },
 };
 
 var slotData = [
