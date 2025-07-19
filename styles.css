@@ -825,6 +825,7 @@ button {
 button:hover {
   background-color: var(--button-hover-bg-color);
   border-color: var(--button-hover-border-color);
+  cursor: pointer;
 }
 
 button * {
