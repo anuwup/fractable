@@ -17,12 +17,12 @@ const confirmCloseDialog = document.getElementById("confirm-close-dialog");
 const loadTime = new Date();
 
 const segmentDates = {
-	"1-2": { start: new Date('2025-01-02'), end: new Date('2025-02-07') },
-	"1-4": { start: new Date('2025-01-02'), end: new Date('2025-03-24') },
-	"1-6": { start: new Date('2025-01-02'), end: new Date('2025-04-30') },
-	"3-4": { start: new Date('2025-02-10'), end: new Date('2025-03-24') },
-	"3-6": { start: new Date('2025-02-10'), end: new Date('2025-04-30') },
-	"5-6": { start: new Date('2025-03-25'), end: new Date('2025-04-30') },
+	"1-2": { start: new Date('2025-07-28'), end: new Date('2025-09-01') },
+	"1-4": { start: new Date('2025-07-28'), end: new Date('2025-10-13') },
+	"1-6": { start: new Date('2025-07-28'), end: new Date('2025-11-18') },
+	"3-4": { start: new Date('2025-09-02'), end: new Date('2025-10-13') },
+	"3-6": { start: new Date('2025-09-02'), end: new Date('2025-11-18') },
+	"5-6": { start: new Date('2025-10-14'), end: new Date('2025-11-18') },
 };
 
 var slotData = [
